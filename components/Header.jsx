@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 import logo from "../public/page-image/logo.png";
+import Fade from "react-reveal/Fade";
 
 
 const Header = () => {
@@ -29,6 +30,7 @@ const Header = () => {
     myCanvas.classList.remove("show");
   }
   return (
+    <Fade>
     <header className="header-wrapper">
       <nav className="navbar navbar-expand-lg  navbar-light">
         <button
@@ -88,6 +90,7 @@ const Header = () => {
         </div>
       </nav>
     </header>
+    </Fade>
   );
 };
 
