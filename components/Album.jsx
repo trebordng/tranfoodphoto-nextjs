@@ -50,7 +50,7 @@ const Album = () => {
           <div className="box-wrapper">
             {bottomRow.map((list) => {
               return (
-                <div className="bottom-box-image" >
+                <div className="bottom-box-image" key={`${list.slug}`}>
                   <Link href={`/${list.slug}`} >
                     <a className="album-link">
                       <div className="album-text">{list.name}</div>
