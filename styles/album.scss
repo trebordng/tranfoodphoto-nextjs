@@ -59,14 +59,12 @@
   z-index: 111;
 }
 @media screen and(max-width:767px) {
-    .top-box-image, .bottom-box-image{
-        width: 100% !important;
-        padding-top:2vh;
-
-    }
-    .bottom-album{
-        margin:0  !important;
-    }
-   
-  
+  .top-box-image,
+  .bottom-box-image {
+    width: 100% !important;
+    padding-top: 2vh;
   }
+  .bottom-album {
+    margin: 0 !important;
+  }
+}
