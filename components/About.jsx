@@ -25,22 +25,22 @@ const About = () => {
           <Fancybox>
             <p>
               <div className="box-wrapper">
-                <div  className="album-image">
+                <div  className="about-image">
                   <a data-fancybox="gallery" href={firstImage.src}>
                     <img alt="" src={firstImage.src} className="image" />
                   </a>
                 </div>
-                <div className="album-image">
+                <div className="about-image">
                   <a data-fancybox="gallery" href={secondImage.src}>
                     <img alt="" src={secondImage.src} className="image" />
                   </a>
                 </div>
-                <div className="album-image">
+                <div className="about-image">
                   <a data-fancybox="gallery" href={thirdImage.src}>
                     <img alt="" src={thirdImage.src} className="image" />
                   </a>
                 </div>
-                <div className="album-image">
+                <div className="about-image">
                   <a data-fancybox="gallery" href={finalImage.src}>
                     <img alt="" src={finalImage.src} className="image" />
                   </a>

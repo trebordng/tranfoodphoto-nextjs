@@ -5,6 +5,18 @@
     margin: 0 0.5%;
     object-fit: cover;
   }
-  .album-image{
+  .about-image{
       width:24%;
+      
+  }
+  @media screen and(max-width:767px) {
+    .about-image{
+        width:100%;
+        margin: 0 0 2vh 0;
+    }
+   
+    .image{
+        margin: 0 !important;
+    }
+  
   }
