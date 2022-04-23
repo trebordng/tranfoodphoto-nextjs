@@ -12,10 +12,12 @@ const Landing = () => {
   const t = locale === "en" ? en : vie;
 
   return (
-    <Fade duration={3000}>
-      <section className="landing-page">
+    <section className="landing-page">
+      <Fade duration={1500} delay={500}>
         <div className="title">{t.pageTitle}</div>
-        <div className="subtitle"><em>{t.pageAuthor}</em></div>
+        <div className="subtitle">
+          <em>{t.pageAuthor}</em>
+        </div>
         <img
           src={portraitImage.src}
           className="pretty-lady"
@@ -26,8 +28,8 @@ const Landing = () => {
             <button>{t.open}</button>
           </a>
         </Link>
-      </section>
-    </Fade>
+      </Fade>
+    </section>
   );
 };
 

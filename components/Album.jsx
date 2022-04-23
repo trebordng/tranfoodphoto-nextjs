@@ -24,8 +24,9 @@ const Album = () => {
     { name: t.art, slug: "art", image: art },
   ];
   return (
-    <Fade duration={3000}>
+   
       <section className="page">
+       <Fade duration={1500} delay={500}>
         <div className="page-title">{t.album}</div>
         <div className="page-padding">
           <div className="box-wrapper">
@@ -67,8 +68,9 @@ const Album = () => {
             })}
           </div>
         </div>
+        </Fade>
       </section>
-    </Fade>
+   
   );
 };
 

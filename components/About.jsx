@@ -16,8 +16,8 @@ const About = () => {
   const { locale } = router;
   const t = locale === "en" ? en : vie;
   return (
-    <Fade duration={3000}>
-      <section className="page">
+    <section className="page">
+      <Fade duration={1500} delay={500}>
         <div className="page-title">{t.about}</div>
         <div className="page-padding">{t.aboutText1}</div>
         <div className="page-padding">{t.aboutText2}</div>
@@ -25,7 +25,7 @@ const About = () => {
           <Fancybox>
             <p>
               <div className="box-wrapper">
-                <div  className="about-image">
+                <div className="about-image">
                   <a data-fancybox="gallery" href={firstImage.src}>
                     <img alt="" src={firstImage.src} className="image" />
                   </a>
@@ -49,8 +49,8 @@ const About = () => {
             </p>
           </Fancybox>
         </div>
-      </section>
-    </Fade>
+      </Fade>
+    </section>
   );
 };
 
