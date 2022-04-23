@@ -30,7 +30,6 @@ const Header = () => {
     myCanvas.classList.remove("show");
   }
   return (
-    <Fade duration={1500} delay={500}>
     <header className="header-wrapper">
       <nav className="navbar navbar-expand-lg  navbar-light">
         <button
@@ -90,7 +89,6 @@ const Header = () => {
         </div>
       </nav>
     </header>
-    </Fade>
   );
 };
 
