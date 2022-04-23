@@ -24,7 +24,7 @@ const Album = () => {
     { name: t.art, slug: "art", image: art },
   ];
   return (
-    <Fade>
+    <Fade duration={3000}>
       <section className="page">
         <div className="page-title">{t.album}</div>
         <div className="page-padding">

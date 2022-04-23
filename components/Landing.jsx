@@ -12,7 +12,7 @@ const Landing = () => {
   const t = locale === "en" ? en : vie;
 
   return (
-    <Fade >
+    <Fade duration={3000}>
       <section className="landing-page">
         <div className="title">{t.pageTitle}</div>
         <div className="subtitle"><em>{t.pageAuthor}</em></div>

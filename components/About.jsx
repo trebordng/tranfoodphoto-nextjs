@@ -16,7 +16,7 @@ const About = () => {
   const { locale } = router;
   const t = locale === "en" ? en : vie;
   return (
-    <Fade>
+    <Fade duration={3000}>
       <section className="page">
         <div className="page-title">{t.about}</div>
         <div className="page-padding">{t.aboutText1}</div>
