@@ -25,7 +25,7 @@ const About = () => {
   ];
   return (
     <section className="page">
-      <Fade duration={1500} delay={500}>
+      <Fade duration={1500} delay={100}>
         <div className="page-title">{t.about}</div>
         <div className="page-padding">{t.aboutText1}</div>
         <div className="page-padding">{t.aboutText2}</div>
