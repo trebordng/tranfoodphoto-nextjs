@@ -10,6 +10,7 @@ import action from "../public/page-image/album/action-page.jpg";
 import lifestyle from "../public/page-image/album/lifestyle-page.jpg";
 import art from "../public/page-image/album/food-page.jpg";
 import Image from "next/image";
+import DisplayImage from "./DisplayImage";
 
 const Album = () => {
   const router = useRouter();
@@ -36,18 +37,11 @@ const Album = () => {
                 <div className="top-box-image" key={`${list.slug}`}>
                   <Link href={`/${list.slug}`}>
                     <a className="image-link">
-                      <div className="top-album">
-                        <Image
-                          alt={list.name}
-                          src={list.image.src}
-                          layout="fill"
-                          objectFit="cover"
-                          className="image-border"
-                        />
-                        <div className="image-text">{list.name}</div>
-
-                        <div className="image-hover"></div>
-                      </div>
+                      <DisplayImage
+                        outerClass="top-album"
+                        name={list.name}
+                        src={list.image.src}
+                      />
                     </a>
                   </Link>
                 </div>
@@ -60,18 +54,11 @@ const Album = () => {
                 <div className="bottom-box-image" key={`${list.slug}`}>
                   <Link href={`/${list.slug}`}>
                     <a className="image-link">
-                      <div className="bottom-album">
-                        <Image
-                          alt={list.name}
-                          src={list.image.src}
-                          layout="fill"
-                          objectFit="cover"
-                          className="image-border"
-                        />
-                        <div className="image-text">{list.name}</div>
-
-                        <div className="image-hover"></div>
-                      </div>
+                      <DisplayImage
+                        outerClass="bottom-album"
+                        name={list.name}
+                        src={list.image.src}
+                      />
                     </a>
                   </Link>
                 </div>

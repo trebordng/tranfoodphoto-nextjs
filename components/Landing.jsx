@@ -15,7 +15,7 @@ const Landing = () => {
   return (
     <section className="landing-page">
       <Fade duration={1500} delay={500}>
-        <div className="title">{t.pageTitle}</div>
+        <header className="title">{t.pageTitle}</header>
         <div className="subtitle">
           <em>{t.pageAuthor}</em>
         </div>

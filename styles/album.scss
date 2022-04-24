@@ -14,17 +14,11 @@
   height: 40vh;
   margin: 4% 0%;
   object-fit: cover;
-  border-radius: 1rem;
   position: relative;
 }
 .bottom-box-image {
   width: 49%;
 }
-
-.album-link {
-  position: relative;
-}
-
 
 @media screen and(max-width:767px) {
   .top-box-image,

@@ -11,6 +11,7 @@ import secondImage from "../public/page-image/about-me/2.jpg";
 import thirdImage from "../public/page-image/about-me/3.jpg";
 import finalImage from "../public/page-image/about-me/4.jpg";
 import Image from "next/image";
+import DisplayImage from "./DisplayImage";
 
 const About = () => {
   const router = useRouter();
@@ -26,10 +27,10 @@ const About = () => {
   return (
     <section className="page">
       <Fade duration={1500} delay={500}>
-        <div className="page-title">{t.about}</div>
-        <div className="page-padding">{t.aboutText1}</div>
-        <div className="page-padding">{t.aboutText2}</div>
-        <div className="page-padding">
+        <header className="page-title">{t.about}</header>
+        <article className="page-padding">{t.aboutText1}</article>
+        <article className="page-padding">{t.aboutText2}</article>
+        <article className="page-padding">
           <Fancybox>
             <p>
               <div className="box-wrapper">
@@ -37,18 +38,11 @@ const About = () => {
                   return (
                     <div className="about-image" key={`${list.title}`}>
                       <a data-fancybox="gallery" href={list.src}>
-                        <div className="example-image" >
-                          <Image
-                            alt={list.title}
-                            src={list.src}
-                            layout="fill"
-                            objectFit="cover"
-                            className="image-border"
-                          />
-                          <div className="image-text">{list.title}</div>
-
-                          <div className="image-hover"></div>
-                        </div>
+                        <DisplayImage
+                          outerClass="example-image"
+                          name={list.title}
+                          src={list.src}
+                        />
                       </a>
                     </div>
                   );
@@ -56,7 +50,7 @@ const About = () => {
               </div>
             </p>
           </Fancybox>
-        </div>
+        </article>
       </Fade>
     </section>
   );
