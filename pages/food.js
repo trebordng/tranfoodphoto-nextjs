@@ -6,7 +6,7 @@ import vie from "../locales/vie";
 import { getFoodImages } from "../services";
 import AlbumSubpage from "../components/AlbumSubpage";
 
-const food = ({ images }) => {
+const Food = ({ images }) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
@@ -19,4 +19,4 @@ export async function getStaticProps() {
     props: { images },
   };
 }
-export default food;
+export default Food;

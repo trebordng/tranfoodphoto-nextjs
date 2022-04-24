@@ -10,9 +10,9 @@ import thirdImage from "../public/page-image/about-me/3.jpg";
 import finalImage from "../public/page-image/about-me/4.jpg";
 
 
-const about = () => {
-  const Router = useRouter();
-  const { locale } = Router;
+const About = () => {
+  const router = useRouter();
+  const { locale } = router;
   const t = locale === "en" ? en : vie;
   const example = [
     { src: firstImage.src, title: "Persimmons" },
@@ -54,4 +54,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

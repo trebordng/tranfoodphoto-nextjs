@@ -7,7 +7,7 @@ import vie from "../locales/vie";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
@@ -39,4 +39,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

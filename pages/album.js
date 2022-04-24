@@ -11,7 +11,7 @@ import lifestyle from "../public/page-image/album/lifestyle-page.jpg";
 import art from "../public/page-image/album/food-page.jpg";
 import { DisplayImage } from "../components";
 
-const album = () => {
+const Album = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
@@ -80,4 +80,4 @@ const album = () => {
   );
 };
 
-export default album;
+export default Album;
