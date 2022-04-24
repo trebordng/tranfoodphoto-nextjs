@@ -9,7 +9,7 @@ import drink from "../public/page-image/album/drink-page.jpg";
 import action from "../public/page-image/album/action-page.jpg";
 import lifestyle from "../public/page-image/album/lifestyle-page.jpg";
 import art from "../public/page-image/album/food-page.jpg";
-import DisplayImage from "../components/DisplayImage";
+import { DisplayImage } from "../components";
 
 const Album = () => {
   const router = useRouter();

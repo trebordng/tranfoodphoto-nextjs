@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 import { getFoodImages } from "../services";
-import AlbumSubpage from "../components/AlbumSubpage";
+import {AlbumSubpage} from "../components";
 
 const Food = ({ images }) => {
   const router = useRouter();
