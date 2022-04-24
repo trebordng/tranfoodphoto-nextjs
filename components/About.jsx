@@ -10,11 +10,19 @@ import firstImage from "../public/page-image/about-me/first.jpg";
 import secondImage from "../public/page-image/about-me/2.jpg";
 import thirdImage from "../public/page-image/about-me/3.jpg";
 import finalImage from "../public/page-image/about-me/4.jpg";
+import Image from "next/image";
 
 const About = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
+  const example = [
+    { src: firstImage.src, title: "" },
+    { src: secondImage.src, title: "about" },
+
+    { src: thirdImage.src, title: "album" },
+    { src: finalImage.src, title: "recipe" },
+  ];
   return (
     <section className="page">
       <Fade duration={1500} delay={500}>
@@ -25,26 +33,26 @@ const About = () => {
           <Fancybox>
             <p>
               <div className="box-wrapper">
-                <div className="about-image">
-                  <a data-fancybox="gallery" href={firstImage.src}>
-                    <img alt="" src={firstImage.src} className="image" />
-                  </a>
-                </div>
-                <div className="about-image">
-                  <a data-fancybox="gallery" href={secondImage.src}>
-                    <img alt="" src={secondImage.src} className="image" />
-                  </a>
-                </div>
-                <div className="about-image">
-                  <a data-fancybox="gallery" href={thirdImage.src}>
-                    <img alt="" src={thirdImage.src} className="image" />
-                  </a>
-                </div>
-                <div className="about-image">
-                  <a data-fancybox="gallery" href={finalImage.src}>
-                    <img alt="" src={finalImage.src} className="image" />
-                  </a>
-                </div>
+                {example.map((list) => {
+                  return (
+                    <div className="about-image">
+                      <a data-fancybox="gallery" href={list.src}>
+                        <div className="example-image">
+                          <Image
+                            alt={list.title}
+                            src={list.src}
+                            layout="fill"
+                            objectFit="cover"
+                            className="image-border"
+                          />
+                          <div className="image-text">{list.title}</div>
+
+                          <div className="image-hover"></div>
+                        </div>
+                      </a>
+                    </div>
+                  );
+                })}
               </div>
             </p>
           </Fancybox>

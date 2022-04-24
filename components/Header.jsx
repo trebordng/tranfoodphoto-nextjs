@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 import logo from "../public/page-image/logo.png";
-import Fade from "react-reveal/Fade";
-
+import Image from "next/image";
 
 const Header = () => {
   const router = useRouter();
@@ -14,11 +13,11 @@ const Header = () => {
   const navList = [
     { name: t.home, slug: "" },
     { name: t.about, slug: "about" },
-  
+
     { name: t.album, slug: "album" },
     { name: t.recipe, slug: "recipe" },
     { name: t.blog, slug: "blog" },
-    { name: t.contact, slug: "contact" }
+    { name: t.contact, slug: "contact" },
   ];
   const changeLanguage = (e) => {
     const locale = e.target.value;
@@ -53,14 +52,21 @@ const Header = () => {
             <li className="nav-item-image">
               <Link href="/">
                 <a onClick={addHidden}>
-                  <img src={logo.src} className="logo" alt="logo" />
+                  <div className="logo">
+                    <Image
+                      alt="logo"
+                      src={logo.src}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
                 </a>
               </Link>
             </li>
             {navList.map((list) => {
               return (
                 <li className="nav-item " key={`${list.slug}`}>
-                  <Link href={`/${list.slug}`} >
+                  <Link href={`/${list.slug}`}>
                     <a
                       onClick={addHidden}
                       className={

@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'Andes';
-  src: url('font.otf');
+  font-family: "Andes";
+  src: url("font.otf");
   font-style: normal;
   font-weight: bolder;
-  }
+}
 
 html,
 body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-family: 'Andes',sans-serif;
+  font-family: "Andes", sans-serif;
 }
 
 a {
@@ -19,7 +19,6 @@ a {
 }
 
 * {
-
   box-sizing: border-box;
 }
 /* page setting*/
@@ -105,11 +104,50 @@ a {
   text-align: justify;
 }
 
-.box-wrapper{
+.box-wrapper {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
+}
+.image-border {
+  border-radius: 1rem;
+}
+.image-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #f9f9f9;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 112;
+}
+.image-link {
+  position: relative;
+}
+.image-hover {
+  border-radius: 1rem;
+
+  background: linear-gradient(
+    165deg,
+    rgba(249, 249, 249, 0.2) 0%,
+    rgba(249, 249, 249, 0.3) 100%
+  );
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 40vh;
+  width: 100%;
+  position: absolute;
+
+  z-index: -2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(190, 174, 226, 0.4);
 }
 
+.image-link:hover .image-hover {
+  z-index: 111;
+}
 /* utility */
 button {
   font-size: 1rem;
@@ -170,28 +208,23 @@ button:hover {
   text-align: center;
 }
 
-
 /* utility */
 /* Responsive */
 @media screen and(max-width:991px) {
-  .glass{
+  .glass {
     height: 95vh !important;
   }
- 
-
 }
 @media screen and(max-width:767px) {
-  .page{
+  .page {
     max-height: 73vh !important;
   }
-  .main{
-    margin-top:6vh !important;
+  .main {
+    margin-top: 6vh !important;
   }
-  .box-wrapper{
+  .box-wrapper {
     flex-direction: column !important;
   }
- 
-
 }
 
 /* Responsive */

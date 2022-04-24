@@ -9,6 +9,7 @@ import drink from "../public/page-image/album/drink-page.jpg";
 import action from "../public/page-image/album/action-page.jpg";
 import lifestyle from "../public/page-image/album/lifestyle-page.jpg";
 import art from "../public/page-image/album/food-page.jpg";
+import Image from "next/image";
 
 const Album = () => {
   const router = useRouter();
@@ -25,24 +26,28 @@ const Album = () => {
     { name: t.art, slug: "art", image: art },
   ];
   return (
-   
-      <section className="page">
-       <Fade duration={1500} delay={500}>
+    <section className="page">
+      <Fade duration={1500} delay={500}>
         <div className="page-title">{t.album}</div>
         <div className="page-padding">
           <div className="box-wrapper">
             {topRow.map((list) => {
               return (
                 <div className="top-box-image" key={`${list.slug}`}>
-                  <Link href={`/${list.slug}`} >
-                    <a className="album-link">
-                      <div className="album-text">{list.name}</div>
-                      <img
-                        alt={list.name}
-                        src={list.image.src}
-                        className="top-album"
-                      />
-                      <div className="album-hover"></div>
+                  <Link href={`/${list.slug}`}>
+                    <a className="image-link">
+                      <div className="top-album">
+                        <Image
+                          alt={list.name}
+                          src={list.image.src}
+                          layout="fill"
+                          objectFit="cover"
+                          className="image-border"
+                        />
+                        <div className="image-text">{list.name}</div>
+
+                        <div className="image-hover"></div>
+                      </div>
                     </a>
                   </Link>
                 </div>
@@ -53,15 +58,20 @@ const Album = () => {
             {bottomRow.map((list) => {
               return (
                 <div className="bottom-box-image" key={`${list.slug}`}>
-                  <Link href={`/${list.slug}`} >
-                    <a className="album-link">
-                      <div className="album-text">{list.name}</div>
-                      <img
-                        alt={list.name}
-                        src={list.image.src}
-                        className="bottom-album"
-                      />
-                      <div className="album-hover"></div>
+                  <Link href={`/${list.slug}`}>
+                    <a className="image-link">
+                      <div className="bottom-album">
+                        <Image
+                          alt={list.name}
+                          src={list.image.src}
+                          layout="fill"
+                          objectFit="cover"
+                          className="image-border"
+                        />
+                        <div className="image-text">{list.name}</div>
+
+                        <div className="image-hover"></div>
+                      </div>
                     </a>
                   </Link>
                 </div>
@@ -69,9 +79,8 @@ const Album = () => {
             })}
           </div>
         </div>
-        </Fade>
-      </section>
-   
+      </Fade>
+    </section>
   );
 };
 

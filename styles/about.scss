@@ -1,22 +1,22 @@
-
-  .image {
+.example-image {
+  width: 100%;
+  height: 40vh;
+  margin: 0 0.5%;
+  position: relative;
+}
+.about-image {
+  width: 24%;
+}
+.example-image:hover .image-hover{
+    z-index: 111;
+}
+@media screen and(max-width:767px) {
+  .about-image {
     width: 100%;
-    height: 35vh;
-    margin: 0 0.5%;
-    object-fit: cover;
+    margin: 0 0 2vh 0;
   }
-  .about-image{
-      width:24%;
-      
+
+  .example-image {
+    margin: 0 !important;
   }
-  @media screen and(max-width:767px) {
-    .about-image{
-        width:100%;
-        margin: 0 0 2vh 0;
-    }
-   
-    .image{
-        margin: 0 !important;
-    }
-  
-  }
+}

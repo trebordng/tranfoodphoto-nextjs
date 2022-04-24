@@ -55,6 +55,7 @@
 
 .logo {
   width: 20vw;
+  height: 20vh;
 }
 .nav-item select option{  
   background: #d1c6ea;
@@ -121,5 +122,10 @@
   }
   .logo{
     width: 30vw;
+  }
+}
+@media screen and(max-width:767px) and(orientation:portrait){
+  .logo{
+    width:40vw !important;
   }
 }

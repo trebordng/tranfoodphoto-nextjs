@@ -1,16 +1,19 @@
-.landing-page{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 80vh;
-   flex-direction: column;
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
 }
-.pretty-lady{
-    width:25vh;
-    height: 25vh;
-    object-fit: cover;
-    border-radius: 50%;
-    object-position: 10% 10%;
-    margin:6vh 0 6vh 0;
+.pretty-lady {
+  width: 25vh;
+  height: 25vh;
+  object-fit: cover;
 
+  margin: 6vh 0 6vh 0;
+  position: relative;
+}
+.portrait-border {
+  object-position: 10% 10%;
+  border-radius: 50%;
 }
