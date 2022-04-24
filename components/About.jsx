@@ -18,10 +18,10 @@ const About = () => {
   const t = locale === "en" ? en : vie;
   const example = [
     { src: firstImage.src, title: "Persimmons" },
-    { src: secondImage.src, title: "about" },
+    { src: secondImage.src, title: "Red Fruit" },
 
-    { src: thirdImage.src, title: "album" },
-    { src: finalImage.src, title: "recipe" },
+    { src: thirdImage.src, title: "Morning Tea" },
+    { src: finalImage.src, title: "I Need Rhum" },
   ];
   return (
     <section className="page">
