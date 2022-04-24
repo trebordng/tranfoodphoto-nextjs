@@ -17,7 +17,7 @@ const About = () => {
   const { locale } = router;
   const t = locale === "en" ? en : vie;
   const example = [
-    { src: firstImage.src, title: "" },
+    { src: firstImage.src, title: "Persimmons" },
     { src: secondImage.src, title: "about" },
 
     { src: thirdImage.src, title: "album" },
