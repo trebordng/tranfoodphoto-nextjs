@@ -37,7 +37,7 @@ const About = () => {
                   return (
                     <div className="about-image">
                       <a data-fancybox="gallery" href={list.src}>
-                        <div className="example-image">
+                        <div className="example-image" key={`${list.title}`}>
                           <Image
                             alt={list.title}
                             src={list.src}
