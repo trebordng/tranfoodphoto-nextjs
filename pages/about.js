@@ -11,8 +11,8 @@ import finalImage from "../public/page-image/about-me/4.jpg";
 
 
 const about = () => {
-  const router = useRouter();
-  const { locale } = router;
+  const Router = useRouter();
+  const { locale } = Router;
   const t = locale === "en" ? en : vie;
   const example = [
     { src: firstImage.src, title: "Persimmons" },
