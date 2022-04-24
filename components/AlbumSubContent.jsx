@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 import Fancybox from './Fancybox';
 import DisplayImage from './DisplayImage';
 
-const AlbumSubpage = (props) => {
+const AlbumSubContent = (props) => {
   return (
     <section className="page">
       <Fade duration={1500} delay={500}>
@@ -35,4 +35,4 @@ const AlbumSubpage = (props) => {
   )
 }
 
-export default AlbumSubpage
+export default AlbumSubContent
