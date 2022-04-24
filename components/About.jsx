@@ -35,9 +35,9 @@ const About = () => {
               <div className="box-wrapper">
                 {example.map((list) => {
                   return (
-                    <div className="about-image">
+                    <div className="about-image" key={`${list.title}`}>
                       <a data-fancybox="gallery" href={list.src}>
-                        <div className="example-image" key={`${list.title}`}>
+                        <div className="example-image" >
                           <Image
                             alt={list.title}
                             src={list.src}
