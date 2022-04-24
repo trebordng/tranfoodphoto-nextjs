@@ -3,19 +3,19 @@ import Image from "next/image";
 
 const DisplayImage = (props) => {
   return (
-    <div className={props.outerClass}>
+    <figure className={props.outerClass}>
       <Image
-        alt={props.name}
+        alt={props.alt}
         src={props.src}
         layout="fill"
         objectFit="cover"
         className="image-border"
         quality={80}
       />
-      <div className="image-text">{props.name}</div>
+      <figcaption className="image-text">{props.name}</figcaption>
 
       <div className="image-hover"></div>
-    </div>
+    </figure>
   );
 };
 

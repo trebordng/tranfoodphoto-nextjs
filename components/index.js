@@ -1,4 +1,3 @@
 export { default as Layout } from "./Layout";
-export { default as Landing } from "./Landing";
-export { default as About } from "./About";
-export { default as Album } from "./Album";
+export { default as Fancybox } from "./Fancybox";
+export { default as DisplayImage } from "./DisplayImage";

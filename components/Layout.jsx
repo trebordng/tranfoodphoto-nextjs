@@ -13,7 +13,7 @@ function Layout({ children }) {
               <Header />
             </div>
 
-            <main className="col-lg-9 col-md-9 main">{children}</main>
+            <section className="col-lg-9 col-md-9 main">{children}</section>
           </div>
         </div>
       </Fade>

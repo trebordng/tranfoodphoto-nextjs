@@ -9,4 +9,8 @@ module.exports = {
     locales: ['en', 'vie'],
     defaultLocale: 'en',
   },
+  images: {
+    domains: ['media.graphassets.com'],
+  },
+  
 };
