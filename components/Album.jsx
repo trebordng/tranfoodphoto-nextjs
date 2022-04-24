@@ -27,7 +27,7 @@ const Album = () => {
   ];
   return (
     <section className="page">
-      <Fade duration={1500} delay={100}>
+      <Fade duration={1500} delay={500}>
         <div className="page-title">{t.album}</div>
         <div className="page-padding">
           <div className="box-wrapper">
