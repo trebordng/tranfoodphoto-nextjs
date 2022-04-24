@@ -58,6 +58,7 @@ const Header = () => {
                       src={logo.src}
                       layout="fill"
                       objectFit="cover"
+                      quality={80}
                     />
                   </div>
                 </a>
