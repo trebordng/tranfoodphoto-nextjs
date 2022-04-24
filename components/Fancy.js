@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Fancybox as NativeFancybox } from "@fancyapps/ui/dist/fancybox.umd.js";
 import "@fancyapps/ui/dist/fancybox.css";
 
-function Fancybox(props) {
+function Fancy(props) {
   const delegate = props.delegate || "[data-fancybox]";
 
   useEffect(() => {
@@ -19,4 +19,4 @@ function Fancybox(props) {
   return <>{props.children}</>;
 }
 
-export default Fancybox;
+export default Fancy;

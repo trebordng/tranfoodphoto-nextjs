@@ -7,7 +7,7 @@ import firstImage from "../public/page-image/about-me/first.jpg";
 import secondImage from "../public/page-image/about-me/2.jpg";
 import thirdImage from "../public/page-image/about-me/3.jpg";
 import finalImage from "../public/page-image/about-me/4.jpg";
-import Fancybox from "./Fancybox";
+import Fancy from "./Fancy";
 import DisplayImage from "./DisplayImage";
 
 const About = () => {
@@ -28,7 +28,7 @@ const About = () => {
         <article className="page-padding">{t.aboutText1}</article>
         <article className="page-padding">{t.aboutText2}</article>
         <article className="page-padding">
-          <Fancybox>
+          <Fancy>
             <p>
               <div className="box-wrapper">
                 {example.map((list) => {
@@ -47,7 +47,7 @@ const About = () => {
                 })}
               </div>
             </p>
-          </Fancybox>
+          </Fancy>
         </article>
       </Fade>
     </section>

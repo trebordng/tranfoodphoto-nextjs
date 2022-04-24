@@ -1,6 +1,6 @@
 import React from 'react'
 import Fade from "react-reveal/Fade";
-import Fancybox from './Fancybox';
+import Fancy from './Fancy';
 import DisplayImage from './DisplayImage';
 
 const AlbumSubContent = (props) => {
@@ -9,7 +9,7 @@ const AlbumSubContent = (props) => {
       <Fade duration={1500} delay={500}>
         <header className="page-title">{props.title}</header>
         <article className="page-padding">
-          <Fancybox>
+          <Fancy>
             <p>
               <div className="box-wrapper">
                 {(props.array).map((image, index) => {
@@ -28,7 +28,7 @@ const AlbumSubContent = (props) => {
                 })}
               </div>
             </p>
-          </Fancybox>
+          </Fancy>
         </article>
       </Fade>
     </section>
