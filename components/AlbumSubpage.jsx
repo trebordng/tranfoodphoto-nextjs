@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from "react-reveal/Fade";
-import Fancybox from './Fancybox';
-import DisplayImage from './DisplayImage';
+import {Fancybox,DisplayImage} from './index';
+
 
 const AlbumSubpage = (props) => {
   return (
