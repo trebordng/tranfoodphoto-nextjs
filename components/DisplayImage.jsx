@@ -11,6 +11,7 @@ const DisplayImage = (props) => {
         objectFit="cover"
         className="image-border"
         quality={80}
+        loading="lazy"
       />
       <figcaption className="image-text">{props.name}</figcaption>
 

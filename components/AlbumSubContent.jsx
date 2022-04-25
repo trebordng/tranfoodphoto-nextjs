@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import Fade from "react-reveal/Fade";
-import Fancy from './Fancy';
-import DisplayImage from './DisplayImage';
+import Fancy from "./Fancy";
+import DisplayImage from "./DisplayImage";
 
 const AlbumSubContent = (props) => {
   return (
@@ -12,18 +12,20 @@ const AlbumSubContent = (props) => {
           <Fancy>
             <p>
               <div className="box-wrapper">
-                {(props.array).map((image, index) => {
+                {props.array.map((image, index) => {
                   return (
-                    <article className="album-image" key={index}>
-                      <a data-fancybox="gallery" href={image.node.image.url}>
-                        <DisplayImage
-                          outerClass="display-image"
-                          name={image.node.title}
-                          src={image.node.image.url}
-                          alt={image.node.alt}
-                        />
-                      </a>
-                    </article>
+                    <Fade>
+                      <article className="album-image" key={index}>
+                        <a data-fancybox="gallery" href={image.node.image.url}>
+                          <DisplayImage
+                            outerClass="display-image"
+                            name={image.node.title}
+                            src={image.node.image.url}
+                            alt={image.node.alt}
+                          />
+                        </a>
+                      </article>
+                    </Fade>
                   );
                 })}
               </div>
@@ -32,7 +34,7 @@ const AlbumSubContent = (props) => {
         </article>
       </Fade>
     </section>
-  )
-}
+  );
+};
 
-export default AlbumSubContent
+export default AlbumSubContent;
