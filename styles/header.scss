@@ -115,8 +115,11 @@
     position: absolute;
     z-index: 9999;
     border-radius: 0 0 1rem 1rem;
-    height: calc(95vh - 40px)!important;
+    
 
+  }
+  .navbar-nav{
+    height: calc(95vh - 40px) !important;
   }
   .nav-item-image{
     height: 30%;
