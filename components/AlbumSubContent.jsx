@@ -14,8 +14,8 @@ const AlbumSubContent = (props) => {
               <div className="box-wrapper">
                 {props.array.map((image, index) => {
                   return (
-                    <Fade>
-                      <article className="album-image" key={index}>
+                    <Fade key={index}>
+                      <article className="album-image" >
                         <a data-fancybox="gallery" href={image.node.image.url}>
                           <DisplayImage
                             outerClass="display-image"
