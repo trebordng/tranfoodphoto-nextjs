@@ -5,9 +5,8 @@ import vie from "../locales/vie";
 import Fade from "react-reveal/Fade";
 import firstImage from "../public/page-image/about-me/first.jpg";
 import secondImage from "../public/page-image/about-me/2.jpg";
-import thirdImage from "../public/page-image/about-me/3.jpg";
 import finalImage from "../public/page-image/about-me/4.jpg";
-import {Fancy,DisplayImage} from "../components";
+import { Fancy, DisplayImage } from "../components";
 
 const About = () => {
   const router = useRouter();
@@ -16,8 +15,6 @@ const About = () => {
   const example = [
     { src: firstImage.src, title: "Persimmons" },
     { src: secondImage.src, title: "Red Fruit" },
-
-    { src: thirdImage.src, title: "Morning Tea" },
     { src: finalImage.src, title: "I Need Rhum" },
   ];
   return (

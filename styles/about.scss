@@ -5,7 +5,7 @@
   position: relative;
 }
 .about-image {
-  width: 24%;
+  width: 32.6667%;
 }
 .example-image:hover .image-hover {
   z-index: 111;
@@ -13,7 +13,7 @@
 @media screen and(max-width:767px) {
   .about-image {
     width: 100%;
-    margin: 0 0 2vh 0;
+    margin: 0 0 calc(3% + 5px) 0;
   }
 
   .example-image {
