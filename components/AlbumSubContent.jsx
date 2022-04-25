@@ -16,7 +16,7 @@ const AlbumSubContent = (props) => {
                   return (
                     <Fade key={index}>
                       <article className="album-image" >
-                        <a data-fancybox="gallery" href={image.node.image.url}>
+                        <a data-fancybox="gallery" href={image.node.image.url} data-caption={image.node.title} >
                           <DisplayImage
                             outerClass="display-image"
                             name={image.node.title}

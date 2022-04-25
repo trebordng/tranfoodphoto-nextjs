@@ -19,6 +19,5 @@ export const getFoodImages = async () => {
     }
   `;
   const results = await request(graphqlAPI, query);
-  console.log('1')
   return results.foodsConnection.edges;
 };
