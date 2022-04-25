@@ -30,11 +30,11 @@ const Album = () => {
           <div className="box-wrapper">
             {topRow.map((list) => {
               return (
-                <article className="top-box-image" key={`${list.slug}`}>
+                <article className="  top-album" key={`${list.slug}`}>
                   <Link href={`/${list.slug}`}>
                     <a className="image-link">
                       <DisplayImage
-                        outerClass="top-album"
+                        outerClass="top-bottom-image"
                         name={list.name}
                         src={list.image.src}
                       />
@@ -45,11 +45,11 @@ const Album = () => {
             })}
           </div>
           <div className="box-wrapper">
-            <article className="bottom-box-image">
+            <article className="bottom-album">
               <Link href="/lifestyle">
                 <a className="image-link">
                   <DisplayImage
-                    outerClass="bottom-album"
+                    outerClass="top-bottom-image"
                     name={t.lifestyle}
                     src={lifestyle.src}
                     alt={t.lifestyle}
@@ -57,7 +57,7 @@ const Album = () => {
                 </a>
               </Link>
             </article>
-            <article className="bottom-box-image">
+            <article className="bottom-album">
               <Link href="https://tranphotographicart.com/">
                 <a
                   className="image-link"
@@ -65,7 +65,7 @@ const Album = () => {
                   target="_blank"
                 >
                   <DisplayImage
-                    outerClass="bottom-album"
+                    outerClass="top-bottom-image"
                     name={t.art}
                     src={art.src}
                     alt={t.art}

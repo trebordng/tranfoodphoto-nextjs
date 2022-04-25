@@ -4,7 +4,7 @@ export default {
   pageAuthor: "của Trần Diệp",
   home: "Trang Chủ",
   about: "Một Chút Về Tôi",
-  album: "Kho ảnh",
+  album: "Kho Ảnh",
   recipe: "Công Thức",
   blog: "Kí Sự",
   contact: "Liên Hệ",

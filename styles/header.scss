@@ -11,7 +11,7 @@
   padding:0 ;
 }
 .navbar-nav {
-  height: 68vh;
+  height: 94%;
 }
 .navbar{
   height: 80vh;
@@ -86,9 +86,7 @@
 
 }
 @media screen and(min-width:768px) and (max-width:991px){
-  .navbar-nav{
-    height: 83vh !important;
-  }
+  
   .header-wrapper,.navbar{
     height: 95vh !important;
   }
@@ -117,6 +115,7 @@
     position: absolute;
     z-index: 9999;
     border-radius: 0 0 1rem 1rem;
+    height: calc(95vh - 40px)!important;
 
   }
   .nav-item-image{
@@ -129,15 +128,16 @@
   .nav-item{  
     height: 10%;
   }
-  .navbar-nav{
-    height: calc(95vh - 40px)!important;
-  }
-  .logo{
-    width: 30vw;
-  }
+  
 }
 @media screen and(max-width:767px) and(orientation:portrait){
   .logo{
     width:40vw !important;
+  }
+}
+@media screen and(min-width:768px) and(max-width:991px) and(orientation:portrait){
+  .logo{
+    width:20vw !important;
+    height: 12vh;
   }
 }
