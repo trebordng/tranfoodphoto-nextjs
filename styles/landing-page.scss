@@ -24,11 +24,7 @@
   text-align: center;
   
 }
-@media screen and(max-width:767px) and(orientation:landscape){
-  .title{
-    margin:0 !important;
-  }
-}
+
 @media screen and(max-width:767px) and(orientation:portrait){
   .title{
     margin:0 3%;
