@@ -53,7 +53,6 @@ a {
   height: 80vh;
 }
 .page {
-
   padding-left: 5px;
   height: 80%;
   overflow-y: scroll;
@@ -101,14 +100,16 @@ a {
 }
 .page-padding {
   font-size: 1rem;
-  margin:3%;
+  margin: 3%;
   text-align: justify;
+}
+.image-padding {
+  margin: 3% 2.5%;
 }
 
 .box-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .image-border {
   border-radius: 1rem;
@@ -151,6 +152,13 @@ a {
 .image-link:hover .image-hover {
   z-index: 111;
 }
+.page-function {
+  display: flex;
+  padding: 0 0.5%;
+  z-index: 112;
+  width: 100%;
+  justify-content: space-between;
+}
 /* utility */
 button {
   font-size: 1rem;
@@ -159,8 +167,8 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(
     165deg,
-    rgba(249, 249, 249, 0.2) 0%,
-    rgba(249, 249, 249, 0.2) 100%
+    rgba(249, 249, 249, 0.4) 0%,
+    rgba(249, 249, 249, 0.4) 100%
   );
   border-radius: 4px;
 }
@@ -178,22 +186,15 @@ button:hover {
   25% {
     background: linear-gradient(
       165deg,
-      rgba(249, 249, 249, 0.3) 0%,
-      rgba(249, 249, 249, 0.3) 100%
+      rgba(249, 249, 249, 0.4) 0%,
+      rgba(249, 249, 249, 0.4) 100%
     );
   }
   50% {
     background: linear-gradient(
       165deg,
-      rgba(249, 249, 249, 0.4) 0%,
-      rgba(249, 249, 249, 0.4) 100%
-    );
-  }
-  100% {
-    background: linear-gradient(
-      165deg,
       rgba(249, 249, 249, 0.5) 0%,
-      rgba(249, 249, 249, 0.5) 100%
+      rgba(249, 249, 249, 0.6) 100%
     );
   }
   100% {
@@ -203,25 +204,37 @@ button:hover {
       rgba(249, 249, 249, 0.6) 100%
     );
   }
+  100% {
+    background: linear-gradient(
+      165deg,
+      rgba(249, 249, 249, 0.7) 0%,
+      rgba(249, 249, 249, 0.7) 100%
+    );
+  }
 }
-
 
 /* utility */
 /* Responsive */
 @media screen and(max-width:991px) {
+  .page-function{
+    flex-direction: column;
+    gap:10px;
+  }
   .glass {
     height: 95vh !important;
   }
 }
 @media screen and(min-width:768px) and(max-width:991px) {
-  .main{
+  .main {
     height: 95vh;
   }
-  
 }
 @media screen and(max-width:767px) {
+  .image-padding {
+    margin: 3% !important;
+  }
   .main {
-    height: calc(95vh - 40px)!important;
+    height: calc(95vh - 40px) !important;
   }
   .box-wrapper {
     flex-direction: column !important;

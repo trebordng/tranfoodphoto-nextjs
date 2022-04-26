@@ -23,7 +23,7 @@ const About = () => {
         <header className="page-title">{t.about}</header>
         <article className="page-padding">{t.aboutText1}</article>
         <article className="page-padding">{t.aboutText2}</article>
-        <article className="page-padding">
+        <article className="image-padding">
           <Fancy>
             <p>
               <div className="box-wrapper">

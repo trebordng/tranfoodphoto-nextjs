@@ -26,7 +26,7 @@ const Album = () => {
     <section className="page">
       <Fade duration={1500} delay={500}>
         <header className="page-title">{t.album}</header>
-        <section className="page-padding">
+        <section className="image-padding">
           <div className="box-wrapper">
             {topRow.map((list) => {
               return (

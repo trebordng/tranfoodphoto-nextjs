@@ -61,7 +61,6 @@
   position: relative;
 }
 .nav-item select option{  
-  background: #d1c6ea;
   color:#26222d;
   border:none;
  
@@ -74,6 +73,9 @@
 .select-language:focus{
   background: transparent;
   outline: none;
+}
+.select-language:hover{
+  color:#BEAEE2 ;
 }
 .navbar-toggler:focus{
   box-shadow: none !important;

@@ -3,16 +3,15 @@
   height: 100%;
   object-fit: cover;
   position: relative;
-
-  
 }
 .top-album {
-  width: 32%;
+  margin: 0 0.5%;
+  width: 32.3333%;
   height: 40vh;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
-
 .bottom-album {
+  margin: 0 0.5%;
   width: 49%;
   height: 40vh;
 }
@@ -24,26 +23,114 @@
 }
 
 .album-image {
-  margin: 0 0% 2% 0%;
+  margin: 0 0.5% 1% 0.5%;
   height: 40vh;
-  width: 32%;
+  width: 32.3333%;
+}
+.album-padding {
+  padding: 3% 0;
 }
 .display-image:hover .image-hover {
   z-index: 111;
 }
+.search {
+  display: flex;
+  width: 78%;
+  justify-content: flex-end;
+  gap: 1%;
+  overflow: hidden;
+}
+.search-input {
+  background: linear-gradient(
+    165deg,
+    rgba(249, 249, 249, 0.4) 0%,
+    rgba(249, 249, 249, 0.4) 100%
+  );
+  border-radius: 4px;
+  padding: 0 6px;
+  border-color: #26222d;
+  border: none;
+}
+.search-input:hover {
+  background: linear-gradient(
+    165deg,
+    rgba(249, 249, 249, 0.7) 0%,
+    rgba(249, 249, 249, 0.7) 100%
+  );
+}
+.search-input:focus,
+.quick-link:focus {
+  outline: none;
+}
+.quick-link {
+  width: 15%;
+  background: linear-gradient(
+    165deg,
+    rgba(249, 249, 249, 0.4) 0%,
+    rgba(249, 249, 249, 0.4) 100%
+  );
+  border-radius: 4px;
+  padding: 6px;
+  border: none;
+}
+.quick-link:hover {
+  background: linear-gradient(
+    165deg,
+    rgba(249, 249, 249, 0.7) 0%,
+    rgba(249, 249, 249, 0.7) 100%
+  );
+}
+.back-to-top {
+  padding:0 !important;
+  bottom: 2%;
+  left: 25%;
+  right: 0;
+  position: absolute;
+  width: 1rem;
+  margin: auto;
+  background: transparent !important;
+  border: none !important;
+}
+.angle-up{
+  color:#26222d;
+  font-size: 2rem;
+}
+.angle-up:hover{
+  color:#BEAEE2 ;
+}
 @media screen and(max-width:767px) {
+  .angle-up{
+    color:#26222d;
+    font-size: 1rem;
+  }
+  .back-to-top {
+    left: 0 !important;
+    bottom:1%;
+    width: 30%;
+  }
   .album-image {
-    margin: 0 0 calc(3% + 5px) 0;
+    margin: 0 0 calc(3% + 5px) 0 !important;
   }
   .album-image {
     width: 100%;
   }
   .top-album,
-  .bottom-album{
-    width: 100% !important;
-    margin-bottom: calc(3% + 5px);
-  }
   .bottom-album {
-    margin: 0 !important;
+    width: 100% !important;
+    margin: 0 0 calc(3% + 5px) 0 !important;
+  }
+}
+@media screen and(max-width:991px) {
+  .quick-link {
+    width: unset !important;
+  }
+  .search {
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+  }
+  .search-input {
+    width: 50%;
+    gap: 10px;
   }
 }
