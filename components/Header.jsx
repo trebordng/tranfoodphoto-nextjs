@@ -7,6 +7,7 @@ import logo from "../public/page-image/logo.png";
 import Image from "next/image";
 
 const Header = () => {
+  
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
@@ -133,7 +134,7 @@ const Header = () => {
                 >
                   {t.art}
                 </a>
-              </Link>
+              </Link> 
               </div>
               
             </li>

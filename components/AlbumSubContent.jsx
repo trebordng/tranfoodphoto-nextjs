@@ -8,7 +8,11 @@ import en from "../locales/en";
 import vie from "../locales/vie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faAngleUp,faMagnifyingGlass,faArrowRotateRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleUp,
+  faMagnifyingGlass,
+  faArrowRotateRight,
+} from "@fortawesome/free-solid-svg-icons";
 const AlbumSubContent = (props) => {
   const router = useRouter();
   const { locale } = router;
@@ -59,9 +63,7 @@ const AlbumSubContent = (props) => {
           <article className="page-function">
             <select className="quick-link" onChange={changeAlbum}>
               <optgroup label="Change Album"></optgroup>
-              <option value="drink">
-                <a>{t.food}</a>
-              </option>
+              <option value="drink">{t.food}</option>
               <option value="drink">{t.drink}</option>
               <option value="action">{t.action}</option>
               <option value="lifestyle">{t.lifestyle}</option>
@@ -74,35 +76,37 @@ const AlbumSubContent = (props) => {
                 onChange={(e) => setSearchFilter(e.target.value)}
               />
 
-              <button onClick={search}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-              <button onClick={reset}><FontAwesomeIcon icon={faArrowRotateRight} /></button>
+              <button onClick={search}>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+              <button onClick={reset}>
+                <FontAwesomeIcon icon={faArrowRotateRight} />
+              </button>
             </div>
           </article>
           <Fancy>
-            <p>
-              <div className="box-wrapper album-padding">
-                {filterObject.map((image, index) => {
-                  return (
-                    <Fade key={index}>
-                      <article className="album-image">
-                        <a
-                          data-fancybox="gallery"
-                          href={image.image.url}
-                          data-caption={image.title}
-                        >
-                          <DisplayImage
-                            outerClass="display-image"
-                            name={image.title}
-                            src={image.image.url}
-                            alt={image.alt}
-                          />
-                        </a>
-                      </article>
-                    </Fade>
-                  );
-                })}
-              </div>
-            </p>
+            <div className="box-wrapper album-padding">
+              {filterObject.map((image, index) => {
+                return (
+                  <Fade key={index}>
+                    <article className="album-image">
+                      <a
+                        data-fancybox="gallery"
+                        href={image.image.url}
+                        data-caption={image.title}
+                      >
+                        <DisplayImage
+                          outerClass="display-image"
+                          name={image.title}
+                          src={image.image.url}
+                          alt={image.alt}
+                        />
+                      </a>
+                    </article>
+                  </Fade>
+                );
+              })}
+            </div>
           </Fancy>
         </section>
       </Fade>

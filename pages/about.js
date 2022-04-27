@@ -25,24 +25,22 @@ const About = () => {
         <article className="page-padding">{t.aboutText2}</article>
         <article className="image-padding">
           <Fancy>
-            <p>
-              <div className="box-wrapper">
-                {example.map((list) => {
-                  return (
-                    <article className="about-image" key={`${list.title}`}>
-                      <a data-fancybox="gallery" href={list.src}>
-                        <DisplayImage
-                          outerClass="example-image"
-                          name={list.title}
-                          src={list.src}
-                          alt={list.title}
-                        />
-                      </a>
-                    </article>
-                  );
-                })}
-              </div>
-            </p>
+            <div className="box-wrapper">
+              {example.map((list) => {
+                return (
+                  <article className="about-image" key={`${list.title}`}>
+                    <a data-fancybox="gallery" href={list.src}>
+                      <DisplayImage
+                        outerClass="example-image"
+                        name={list.title}
+                        src={list.src}
+                        alt={list.title}
+                      />
+                    </a>
+                  </article>
+                );
+              })}
+            </div>
           </Fancy>
         </article>
       </Fade>
