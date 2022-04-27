@@ -12,9 +12,11 @@ function MyApp({ Component, pageProps }) {
     import("bootstrap/dist/js/bootstrap");
   }, []);
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+   
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+   
   );
 }
 

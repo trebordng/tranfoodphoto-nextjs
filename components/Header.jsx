@@ -7,7 +7,6 @@ import logo from "../public/page-image/logo.png";
 import Image from "next/image";
 
 const Header = () => {
-  
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
@@ -30,8 +29,9 @@ const Header = () => {
   };
   function addHidden() {
     var myCanvas = document.getElementById("navbarSupportedContent");
-
-    myCanvas.classList.remove("show");
+    setTimeout(() => {
+      myCanvas.classList.remove("show");
+    }, 50);
   }
   return (
     <header className="header-wrapper">
@@ -79,7 +79,7 @@ const Header = () => {
                   }
                   key={`${list.name}`}
                 >
-                  <Link href={`/${list.slug}`}>
+                  <Link href={`/${list.slug}`} replace>
                     <a onClick={addHidden}>{list.name}</a>
                   </Link>
                 </li>
@@ -93,10 +93,7 @@ const Header = () => {
               }
             >
               <Link href="/album">
-                <a
-                  onClick={addHidden}
-                  className={router.asPath === `/album` ? "sub-active" : ""}
-                >
+                <a onClick={addHidden}>
                   <span type="button">{t.album}</span>
                 </a>
               </Link>
@@ -112,7 +109,7 @@ const Header = () => {
               <div className="dropdown-menu">
                 {albumList.map((list) => {
                   return (
-                    <Link href={`/${list.slug}`} key={`/${list.name}`}>
+                    <Link href={`/${list.slug}`} key={`${list.name}`}>
                       <a
                         onClick={addHidden}
                         className={
@@ -127,16 +124,15 @@ const Header = () => {
                   );
                 })}
                 <Link href="https://tranphotographicart.com/">
-                <a
-                  className="dropdown-item"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {t.art}
-                </a>
-              </Link> 
+                  <a
+                    className="dropdown-item"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {t.art}
+                  </a>
+                </Link>
               </div>
-              
             </li>
             <li className="nav-item">
               <select
