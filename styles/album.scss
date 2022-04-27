@@ -98,6 +98,9 @@
 .angle-up:hover{
   color:#BEAEE2 ;
 }
+.fa-magnifying-glass,.fa-arrow-rotate-right{
+  color:#26222d;
+}
 @media screen and(max-width:767px) {
   .angle-up{
     color:#26222d;
@@ -125,7 +128,7 @@
     width: unset !important;
   }
   .search {
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     gap: 10px;
   }

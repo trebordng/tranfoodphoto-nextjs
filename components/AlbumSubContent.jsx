@@ -3,13 +3,12 @@ import Fade from "react-reveal/Fade";
 import Fancy from "./Fancy";
 import DisplayImage from "./DisplayImage";
 import _ from "lodash";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp,faMagnifyingGlass,faArrowRotateRight } from "@fortawesome/free-solid-svg-icons";
 const AlbumSubContent = (props) => {
   const router = useRouter();
   const { locale } = router;
@@ -50,7 +49,7 @@ const AlbumSubContent = (props) => {
         <header className="page-title">{props.title}</header>
         {backToTop ? (
           <button className="back-to-top" onClick={scrollTop}>
-            <FontAwesomeIcon className="angle-up" icon={faAngleUp} />
+            <FontAwesomeIcon icon={faAngleUp} />
           </button>
         ) : (
           <></>
@@ -76,8 +75,8 @@ const AlbumSubContent = (props) => {
                 onChange={(e) => setSearchFilter(e.target.value)}
               />
 
-              <button onClick={search}>Search</button>
-              <button onClick={reset}>Reset</button>
+              <button onClick={search}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+              <button onClick={reset}><FontAwesomeIcon icon={faArrowRotateRight} /></button>
             </div>
           </article>
           <Fancy>
