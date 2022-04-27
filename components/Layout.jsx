@@ -6,7 +6,7 @@ function Layout({ children }) {
   useEffect(() => {}, []);
   return (
     <div className="page-wrapper">
-      <Fade duration={1500} delay={500}>
+      <Fade duration={1000} delay={1000}>
         <div className="glass">
           <div className="row">
             <div className=" header-wrappercol-lg-3 col-md-3 mobile-nav">
