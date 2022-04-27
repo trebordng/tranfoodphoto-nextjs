@@ -49,7 +49,7 @@ const AlbumSubContent = (props) => {
 
   return (
     <section id={router.asPath} className="page" onScroll={back}>
-      <Fade duration={1500} delay={500}>
+      <Fade duration={1000} delay={1000}>
         <header className="page-title">{props.title}</header>
         {backToTop ? (
           <button className="back-to-top" onClick={scrollTop}>

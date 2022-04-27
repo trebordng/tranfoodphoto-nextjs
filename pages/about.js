@@ -19,7 +19,7 @@ const About = () => {
   ];
   return (
     <section className="page">
-      <Fade duration={1500} delay={500}>
+      <Fade duration={1000} delay={1000}>
         <header className="page-title">{t.about}</header>
         <article className="page-padding">{t.aboutText1}</article>
         <article className="page-padding">{t.aboutText2}</article>

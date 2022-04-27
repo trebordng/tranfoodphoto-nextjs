@@ -14,7 +14,7 @@ const Index = () => {
 
   return (
     <section className="landing-page">
-      <Fade duration={1500} delay={500}>
+      <Fade duration={1000} delay={1000}>
         <header className="title">{t.pageTitle}</header>
         <div className="subtitle">
           <em>{t.pageAuthor}</em>
