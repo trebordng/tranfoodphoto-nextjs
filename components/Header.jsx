@@ -13,11 +13,15 @@ const Header = () => {
   const navList = [
     { name: t.home, slug: "" },
     { name: t.about, slug: "about" },
-
-    { name: t.album, slug: "album" },
     { name: t.recipe, slug: "recipe" },
     { name: t.blog, slug: "blog" },
     { name: t.contact, slug: "contact" },
+  ];
+  const albumList = [
+    { name: t.food, slug: "food" },
+    { name: t.drink, slug: "drink" },
+    { name: t.lifestyle, slug: "lifestyle" },
+    { name: t.action, slug: "action" },
   ];
   const changeLanguage = (e) => {
     const locale = e.target.value;
@@ -66,22 +70,73 @@ const Header = () => {
             </li>
             {navList.map((list) => {
               return (
-                <li className="nav-item " key={`${list.slug}`}>
+                <li
+                  className={
+                    router.asPath === `/${list.slug}`
+                      ? "nav-item active"
+                      : "nav-item"
+                  }
+                  key={`${list.name}`}
+                >
                   <Link href={`/${list.slug}`}>
-                    <a
-                      onClick={addHidden}
-                      className={
-                        router.asPath === `/${list.slug}`
-                          ? "nav-link active"
-                          : "nav-link "
-                      }
-                    >
-                      {list.name}
-                    </a>
+                    <a onClick={addHidden}>{list.name}</a>
                   </Link>
                 </li>
               );
             })}
+            <li
+              className={
+                router.asPath === `/album`
+                  ? "nav-item btn-group active dropup"
+                  : "nav-item btn-group dropup"
+              }
+            >
+              <Link href="/album">
+                <a
+                  onClick={addHidden}
+                  className={router.asPath === `/album` ? "sub-active" : ""}
+                >
+                  <span type="button">{t.album}</span>
+                </a>
+              </Link>
+
+              <div
+                type="button"
+                className="dropdown-toggle dropdown-toggle-split"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              ></div>
+
+              <div className="dropdown-menu">
+                {albumList.map((list) => {
+                  return (
+                    <Link href={`/${list.slug}`} key={`/${list.name}`}>
+                      <a
+                        onClick={addHidden}
+                        className={
+                          router.asPath === `/${list.slug}`
+                            ? "active dropdown-item"
+                            : "dropdown-item"
+                        }
+                      >
+                        {list.name}
+                      </a>
+                    </Link>
+                  );
+                })}
+                <Link href="https://tranphotographicart.com/">
+                <a
+                  className="dropdown-item"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {t.art}
+                </a>
+              </Link>
+              </div>
+              
+            </li>
             <li className="nav-item">
               <select
                 onChange={changeLanguage}

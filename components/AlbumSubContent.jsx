@@ -65,7 +65,6 @@ const AlbumSubContent = (props) => {
               <option value="drink">{t.drink}</option>
               <option value="action">{t.action}</option>
               <option value="lifestyle">{t.lifestyle}</option>
-              <option value="art">{t.art}</option>
             </select>
             <div className="search">
               <input
