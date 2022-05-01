@@ -36,6 +36,15 @@
 .nav-item div:hover {
   color: #beaee2 !important;
 }
+.nav-item .dropdown-toggle:hover ~ .dropdown-menu{
+  display: block ;
+}
+.dropdown-menu:hover{
+  display: block;
+}
+.disable{
+  pointer-events: none;
+}
 .nav-item.active,
 .dropdown-item.active {
   color: #26222d !important;
@@ -139,6 +148,13 @@
   }
   .nav-item {
     height: 10%;
+  }
+  .nav-item .dropdown-toggle:hover ~ .dropdown-menu{
+    display: none;
+    bottom: unset;
+  }
+  .dropdown-menu.show{
+    display: block !important;
   }
 }
 @media screen and(max-width:767px) and(orientation:portrait) {
